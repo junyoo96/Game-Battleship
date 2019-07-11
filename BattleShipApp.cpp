@@ -1,6 +1,3 @@
-#include "BattleShipApp.h"
-#include "StatPane.h"
-#include "InputPane.h"
 
 void CBattleShipApp::Init()
 {
