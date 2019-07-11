@@ -57,41 +57,7 @@ void CBattleShipApp::Play()
 
   while(gManager.GetRemainShips()!=0)//끝나는 조건을 남은 배의 수가 0이면으로 판단함
   {
-	  //TEst
-//	  	  	  std::stringstream ss3;
-//	  		ss3<< gManager.Getm_Ships()[3].GetPosition()[1].x;
-//
-//	  		char const* shipHp3=ss3.str().c_str();
-//
-//
-//	  		mvprintw(20,35,shipHp3);
-//
-//	  		std::stringstream ss4;
-//	  		ss4<< gManager.Getm_Ships()[3].GetPosition()[1].y;
-//
-//	  		char const* shipHp4=ss4.str().c_str();
-//
-//
-//	  		mvprintw(22,35,shipHp4);
-//
-//	  	  std::stringstream ss5;
-//	  		  		ss5<< gManager.Getm_Ships()[4].GetPosition()[1].x;
-//
-//	  		  		char const* shipHp5=ss5.str().c_str();
-//
-//
-//	  		  		mvprintw(24,35,shipHp5);
-//
-//	  		  		std::stringstream ss6;
-//	  		  		ss6<< gManager.Getm_Ships()[4].GetPosition()[1].y;
-//
-//	  		  		char const* shipHp6=ss6.str().c_str();
-//
-//
-//	  		  		mvprintw(26,35,shipHp6);
-//
-//	  		refresh();
-	  		//TEST*
+
 
 	  	  	  gManager.Setm_Turn(gManager.Getm_Turn()+1);
 	  	  	  m_pStatPane->Draw(gManager.Getm_Turn());
@@ -113,82 +79,6 @@ void CBattleShipApp::Play()
 			attackPosY=ranPos[1];
 
 
-//  	  switch(getAxis.at(0))
-//  	  {
-//  	  case 'A':
-//  		  attackPosX=0;
-//  		  break;
-//  	  case 'B':
-//  	  		  attackPosX=1;
-//  	  		  break;
-//  	  case 'C':
-//  	  		  attackPosX=2;
-//  	  		  break;
-//  	  case 'D':
-//  	  		  attackPosX=3;
-//  	  		  break;
-//  	  case 'E':
-//  	  		  attackPosX=4;
-//  	  		  break;
-//  	  case 'F':
-//  	  		  attackPosX=5;
-//  	  		  break;
-//  	  case 'G':
-//  	  		  attackPosX=6;
-//  	  		  break;
-//  	  case 'H':
-//  	  		  attackPosX=7;
-//  	  		  break;
-//  	  }
-//  	  //좌표잘못입력하면 보정해주는 알고리즘필요
-//
-//  	  attackPosY=getAxis.at(1)-48;
-//
-//  	  switch(attackPosY)
-//  	  {
-//  	  case 1:
-//  		  attackPosY=0;
-//  		  break;
-//  	  case 2:
-//  	  		  attackPosY=1;
-//  	  		  break;
-//
-//  	  case 3:
-//  	  		  attackPosY=2;
-//  	  		  break;
-//
-//  	  case 4:
-//  	  		  attackPosY=3;
-//  	  		  break;
-//  	  case 5:
-//  	  		  attackPosY=4;
-//  	  		  break;
-//  	  case 6:
-//  	  		  attackPosY=5;
-//  	  		  break;
-//  	  case 7:
-//  	  		  attackPosY=6;
-//  	  		  break;
-//  	  case 8:
-//  	  		  attackPosY=7;
-//  	  		  break;
-//  	  }
-
-
-//					 std::stringstream ss;
-//					ss<<attackPosX;
-//
-//
-//					  std::stringstream ss2;
-//					ss2<<attackPosY;
-//
-//					char const* aX=ss.str().c_str();
-//					char const* aY=ss2.str().c_str();
-//
-//					 mvprintw(20,40,aX);
-//					mvprintw(22,40,aY);
-//					refresh();
-
 
 	  Position attackPos(attackPosX,attackPosY);
 	  //Defender가 입력 좌표가 맞았는지 확인하는 함수 호출
@@ -199,25 +89,9 @@ void CBattleShipApp::Play()
 	  gManager.Getm_Defender().get_Map().Draw();
 
 
-
-
-
-
-
-	  //aX=hitResult.at(0).c_str();
-	  //aY=hitResult.at(1).c_str();
-		  //mvprintw(24,40,aX);
-		  //mvprintw(26,40,aY);
-	  //refresh();
-	  //Test
-
-
 	  //Attacker가 Attacker맵에 공격결과를 표시
 	  gManager.Getm_Attacker().SetHitResult(attackPos,gManager,hitResult);
 	  gManager.Getm_Attacker().get_Map().Draw();
-
-
-
 
   }
 
