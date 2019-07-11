@@ -1,3 +1,4 @@
+#include "BattleShipApp.h"
 
 void CBattleShipApp::Init()
 {
